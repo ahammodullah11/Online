@@ -1,75 +1,17 @@
-# React + TypeScript + Vite
+1:
+JSX কী: JSX-এর পূর্ণরূপ হলো JavaScript XML। এটি জাভাস্ক্রিপ্টের একটি এক্সটেনশন সিনট্যাক্স, যার মাধ্যমে জাভাস্ক্রিপ্ট ফাইলের ভেতরে সরাসরি এইচটিএমএল (HTML)-এর মতো কোড লেখা যায়।
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2:
+Props (প্রপস): এর পূর্ণরূপ হলো Properties। এটি হলো Read-only বা অপরিবর্তনশীল ডেটা, যা প্যারেন্ট (Parent) কম্পোনেন্ট থেকে চাইল্ড (Child) কম্পোনেন্টে পাঠানো হয়। যেমন আপনার প্রজেক্টে tech ডেটাটি App কম্পোনেন্ট থেকে TechCard কম্পোনেন্টে প্রপস হিসেবে পাঠানো হয়েছে। চাইল্ড কম্পোনেন্ট এই ডেটা পরিবর্তন করতে পারে না।
+3:
+useState কী: useState হলো একটি রিয়েক্ট হুক (Hook), যা ফাংশনাল কম্পোনেন্টের ভেতর স্টেট বা পরিবর্তনশীল ডেটা ম্যানেজ করার জন্য ব্যবহার করা হয়। এটি দুটি জিনিস দেয়— একটি হলো বর্তমান ভ্যালু এবং অন্যটি হলো সেই ভ্যালু আপডেট করার ফাংশন।
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+4 :
+useEffect কী: useEffect হলো এমন একটি রিয়েক্ট হুক, যার মাধ্যমে কম্পোনেন্টে সাইড-ইফেক্ট (Side-effects) যেমন— এপিআই কল করা, টাইমার সেট করা বা ডেটা ফেচ করা ইত্যাদি সামলানো হয়। এটি সাধারণত কম্পোনেন্ট রেন্ডার হওয়ার পর রান করে।
+5:
+রিয়েক্ট যখন .map() ব্যবহার করে কোনো লিস্ট বা অনেকগুলো কার্ড রেন্ডার করে, তখন প্রতিটি আইটেমকে আলাদাভাবে চেনার জন্য একটি ইউনিক key প্রপস প্রয়োজন হয়।
+6:
+Conditional Rendering কী: জাভাস্ক্রিপ্টের শর্ত বা কন্ডিশন (যেমন: if/else, টারনারি অপারেটর ? :, অথবা লজিক্যাল &&) ব্যবহার করে স্ক্রিনে নির্দিষ্ট কোনো উপাদান বা কম্পোনেন্ট দেখানো বা লুকিয়ে রাখাকে কন্ডিশনাল রেন্ডারিং বলে।
+7:
+প্যারেন্ট থেকে চাইল্ডে ডেটা পাঠানো (Parent to Child): প্যারেন্ট কম্পোনেন্ট চাইল্ড কম্পোনেন্টকে অ্যাট্রিবিউটের মতো করে প্রপস (Props) হিসেবে ডেটা পাঠায়। যেমন আপনার কোডে
+8:
